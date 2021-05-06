@@ -1,5 +1,11 @@
 #+TITLE: How to create a multi-chapter slide deck for a lecture series 
 
+Using emacs org mode and LaTeX beamer to produce a multi-chapter lecture series 
+
+* History 
+
+This setup grew out of experience with teaching two lecture series (Distributed Systems and Programming 101) using Org mode and Beamer. While overall a great experience, it seemed like some addition structure would be useful. Here is an attempt to provide a versatile setup to support anybody using such a setup for teaching. 
+
 * Structure 
 
 ** Individual chapters 
