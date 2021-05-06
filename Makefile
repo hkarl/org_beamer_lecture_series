@@ -27,7 +27,7 @@ bookTex := $(patsubst %.org,%-chapter.tex,$(wildcard *.org))
 TEMPLATES := $(wildcard ../templates/*)
 BACKMATTER := ../acronyms.tex
 FIGURES := $(wildcard figures/*)
-STANDALONEFIGS := $(patsubst %.tex, %.pdf, $(wildcard standalone/*.tex))
+STANDALONEFIGS := $(wildcard standalone/*.tex)
 
 all: 
 	-make chapterfigures
@@ -38,7 +38,7 @@ chapters:
 	for d in ch*; do make -C $$d chapter  ; done
 
 chapterfigures:
-	for d in ch*; do make -C $$d/standalone figures ; done 
+	for d in ch*; do make -C $$d/standalone all ; done 
 
 #########################
 #########################
@@ -73,8 +73,8 @@ slides169: $(slides169Pdf)
 	${EMACS} $< ${EMACSEXPORTPARAMS}
 
 
-%.pdf: %.tex $(STANDLONEFIGS)
-	echo $(PARAM)
+%.pdf: %.tex $(STANDALONEFIGS)
+	make -C standalone all 
 	-${PDFLATEX} "\\PassOptionsToClass{$(BEAMERPARAM)}{beamer}\\input{$<}"
 ifndef quick
 	-${BIBCOMMAND} $(basename $<)

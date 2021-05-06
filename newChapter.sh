@@ -73,7 +73,7 @@ sed s/AAA/"${lecture}"/ < templates/ch_empty/ch_empty.org  | \
 # link pseudo tex files to tex file, just to have the names in place
 ln -s ch_${chapterLabel}/ch_${chapterLabel}.tex ch_${chapterLabel}/ch_${chapterLabel}_169.tex
 ln -s ch_${chapterLabel}/ch_${chapterLabel}.tex ch_${chapterLabel}/ch_${chapterLabel}_handout.tex
-
+ln -s Makefile_standalone_figures ch_${chapterLabel}/standlone/Makefile
 
 
 # put an external document reference into templates

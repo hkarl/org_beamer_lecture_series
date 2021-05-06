@@ -1,0 +1,10 @@
+.PHONY all
+
+TEXSOURCES := $(wildcard *.org)
+PDFTARGETS := $(patsubst %.tex,%.pdf,$(TEXSOURCES))
+
+all: $(PDFTARGETS)
+
+%.pdf: %.tex 
+      pdflatex $<
+
