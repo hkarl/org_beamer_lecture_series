@@ -1,0 +1,22 @@
+
+* Material 
+
+** References 
+
+*** References 
+    :PROPERTIES:
+    :BEAMER_OPT: allowframebreaks
+    :END:
+
+\renewcommand*{\bibfont}{\tiny}
+\printbibliography[heading=none]
+
+** Acronyms 
+
+*** Acronyms 
+    :PROPERTIES:
+    :BEAMER_OPT: allowframebreaks
+    :END:
+
+\tiny
+\input{../acronyms}

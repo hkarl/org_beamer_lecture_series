@@ -1,0 +1,137 @@
+% Created 2021-05-06 Thu 14:12
+% Intended LaTeX compiler: pdflatex
+\documentclass[a4paper,twoside,11pt]{book}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{grffile}
+\usepackage{longtable}
+\usepackage{wrapfig}
+\usepackage{rotating}
+\usepackage[normalem]{ulem}
+\usepackage{amsmath}
+\usepackage{textcomp}
+\usepackage{amssymb}
+\usepackage{capt-of}
+\usepackage{xr-hyper}
+\usepackage{hyperref}
+\usepackage[noxcolor]{beamerarticle}
+\usepackage[english]{babel}
+\usepackage[style=numeric,bibstyle=numeric,url=false,natbib=true,backend=biber]{biblatex}
+\setbeamertemplate{bibliography item}{\insertbiblabel}
+\addbibresource{../bib.bib}
+\usepackage{tikz}
+\usetikzlibrary{tikzmark}
+\usepackage{tikzsymbols}
+\usepackage[export]{adjustbox}
+\graphicspath{{./figures/}{./standalone/}}
+\usepackage{booktabs}
+\usepackage[printonlyused]{acronym}
+\usepackage{amsmath,amssymb}
+\usetheme{default}
+\author{Holger Karl}
+\date{\today}
+\title{Grundlagen digitaler Systeme}
+\begin{document}
+
+\maketitle
+\setcounter{chapter}{-1}
+
+\tableofcontents 
+
+
+
+\chapter{Organization and content  of this class}
+\label{sec:org0624cd8}
+
+\label{ch:org}
+\maketitle 
+
+
+\section{Willkommen}
+\label{sec:intro:willkommen}
+\begin{frame}[label={f:allererste}]{Eine Folie}
+Verweis auf 
+\begin{itemize}
+\item Kapitel org: \ref{ch:org}
+\item Abschnitt willkommen:  \ref{sec:intro:willkommen}
+\item Abschnitt formales: \ref{sec:intro:formales}
+\item Unterabschnitt ganz formal: \ref{sec:ganz_formal}
+\item Unterabschnitt weniger formal: \ref{sec:weniger_formal}
+\item Folie eins: \ref{f:allererste}
+\item Nächste Folie: \ref{f:weitere}
+\item Kapitel \ref{ch:basics}, und dort Abschnitt \ref{sec:basics_sec}, Unterabschnitt \ref{sec:basics_subsec}
+\end{itemize}
+\end{frame}
+
+
+\section{Formales}
+\label{sec:intro:formales}
+\subsection{Ganz formal}
+\label{sec:ganz_formal}
+\begin{frame}[label={f:weitere}]{Noch eine Folie}
+\begin{itemize}
+\item Text
+\item Mehr Text
+\end{itemize}
+\end{frame}
+
+
+\subsection{Nicht so formal}
+\label{sec:weniger_formal}
+\begin{frame}[label={f:ende}]{Endfolie}
+\begin{itemize}
+\item Text
+\item Lorem
+\end{itemize}
+\end{frame}
+
+
+\part{Technische Grundlagen}
+\label{sec:orgec00902}
+
+\chapter{Basic client/server systems}
+\label{sec:org8cd8a23}
+
+\label{ch:basics}
+\maketitle 
+
+
+\section{Basics section}
+\label{sec:basics_sec}
+\subsection{Basics subsection}
+\label{sec:basics_subsec}
+\begin{frame}[label={f:basic_slide}]{A slide in basics}
+Lorem ipsum
+\end{frame}
+
+
+
+
+\chapter{Organisation}
+\label{sec:org986137f}
+
+\#include: "../ch\textsubscript{org}/ch\textsubscript{org}\textsubscript{content.org}"
+
+\chapter{Organisation}
+\label{sec:org4358563}
+
+\#include: "../ch\textsubscript{org}/ch\textsubscript{org}\textsubscript{content.org}"
+
+\part{Appendix}
+\label{sec:orgf3a2e63}
+
+
+\appendix 
+
+
+\chapter{References}
+\label{sec:org806d386}
+
+\printbibliography[heading=none]
+
+\chapter{Acronyms}
+\label{sec:org37d6858}
+
+\input{../acronyms}
+\end{document}

@@ -1,0 +1,59 @@
+#+startup: beamer
+#+BIBLIOGRAPHY: bib plain
+#+LaTeX_CLASS: book
+#+LaTeX_CLASS_OPTIONS: [a4paper,twoside,11pt]
+#+LATEX_HEADER: \usepackage[noxcolor]{beamerarticle}
+#+OPTIONS: toc:nil H:5
+#+BEAMER_FRAME_LEVEL: 5
+#+COLUMNS: %45ITEM %10BEAMER_env(Env) %10BEAMER_act(Act) %4BEAMER_col(Col) %8BEAMER_opt(Opt) 
+
+#+include: "../templates/shared_header.org"
+
+
+\setcounter{chapter}{-1}
+ 
+#+TITLE: Grundlagen digitaler Systeme 
+
+\tableofcontents 
+
+
+
+** Organization and content  of this class 
+
+#+include: "../ch_intro/ch_intro_content.org"
+
+
+* Technische Grundlagen 
+
+** Basic client/server systems 
+
+#+include: "../ch_basics/ch_basics_content.org"
+
+
+
+
+** Organisation
+
+#include: "../ch_org/ch_org_content.org"
+
+** Organisation
+
+#include: "../ch_org/ch_org_content.org"
+
+* Appendix  
+
+
+\appendix 
+
+
+** References 
+
+\printbibliography[heading=none]
+
+** Acronyms 
+
+\input{../acronyms}
+
+
+
+

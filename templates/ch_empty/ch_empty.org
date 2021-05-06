@@ -1,0 +1,12 @@
+#+TITLE: AAA  \newline Chapter \thechapter: \newline  BBB
+#+include: "../templates/slidehead.org"
+
+\setcounter{chapter}{DDD}
+\refstepcounter{chapter}
+
+
+#+BIBLIOGRAPHY: ../bib plain
+
+#+include: "./CCC_content.org"
+
+#+include: "../templates/references.org"

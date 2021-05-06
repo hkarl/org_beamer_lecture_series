@@ -1,0 +1,26 @@
+# header commands shared between book and slide chapter 
+
+#+LANGUAGE: en
+#+LATEX_HEADER: \usepackage[english]{babel}
+
+
+
+# Citations: 
+#+LATEX_HEADER: \usepackage[style=numeric,bibstyle=numeric,url=false,natbib=true,backend=biber]{biblatex}
+#+LATEX_HEADER: \setbeamertemplate{bibliography item}{\insertbiblabel}
+#+LATEX_HEADER: \addbibresource{../bib.bib}
+#+BIBLIOGRAPHY: ../bib plain
+
+# Graphics, Tikz, etc: 
+
+#+LATEX_HEADER: \usepackage{tikz}
+#+LATEX_HEADER: \usetikzlibrary{tikzmark}
+#+LATEX_HEADER: \usepackage{tikzsymbols}
+#+LATEX_HEADER: \usepackage[export]{adjustbox}
+#+LATEX_HEADER: \graphicspath{{./figures/}{./standalone/}}
+
+
+# Generic latex setup
+#+LATEX_HEADER: \usepackage{booktabs}
+#+LATEX_HEADER: \usepackage[printonlyused]{acronym}
+#+LATEX_HEADER: \usepackage{amsmath,amssymb}

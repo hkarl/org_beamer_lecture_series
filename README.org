@@ -1,0 +1,59 @@
+#+TITLE: How to create a multi-chapter slide deck for a lecture series 
+
+* Structure 
+
+** Individual chapters 
+
+- Each chapter gets one directory 
+- Recommend: do NOT put a chapter number in any directory or file names
+  - It becomes a pain if you want to switch order at some point
+  - Examples: ch_org for organizational material
+
+*** Files per chapter 
+
+- Header: ch_org.org
+  - Usually, no need to touch it directly
+  - Just used to generate PDF 
+- Actual content: ch_org_content.org
+- Symbolic links to tex file; just used to make Makefile simpler 
+
+*** Subdirectories
+  - figures - for figures that cannot be regenerated (or not easily) 
+  - standalone - figures that can be generated, typically based on LaTeX and TiKZ using the standalone package 
+
+
+** book 
+
+- Contains file to include all the chapters into a single document
+- Produced via beamerarticle 
+- Change the TITLE in book/book.org! 
+
+* How to add a new chapter 
+
+Strongly recommended: use newChapter.sh ! 
+
+Parameters: 
+- -l: Lecture Name 
+- -c: Name for the new chapter 
+- -n: Number for the chapter 
+- -r: Label for the chapter, used in \label, directory name and file name 
+
+
+
+
+* Setup 
+
+** emacs / org-mode
+
+- If you want to produced tex files manually, and not via the Makefile: You need to make sure that xr-hyper appears before hyperref in the tex file 
+  - Else, cross-referencing to other documents does not work
+  - Compare file:templates/emacs_init.el 
+  - Easiest way to do that is customize org-latex-default-packages-alist by adding xr-hyper just before hyperref 
+- Also, turn off automatically generated hyperref preamble 
+
+** Latex 
+
+- Obviously, you need an up-to-date LaTeX installation with Beamer 
+
+
+
