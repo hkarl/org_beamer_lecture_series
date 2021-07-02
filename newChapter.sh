@@ -82,6 +82,6 @@ echo "#+LATEX_HEADER: \externaldocument{../ch_${chapterLabel}/ch_${chapterLabel}
 
 # modify book: create an entry to include that chapter, just before the appendix 
 
-sed -I~  "s/* Appendix/** ${chapterName}\n\n#include: \"..\/ch_${chapterLabel}\/ch_${chapterLabel}_content.org\"\n\n\n* Appendix/"   book/book.org
+sed -I~  "s/* Appendix/** ${chapterName}\n\n#+include: \"..\/ch_${chapterLabel}\/ch_${chapterLabel}_content.org\"\n\n\n* Appendix/"   book/book.org
 
 
