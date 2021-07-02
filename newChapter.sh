@@ -56,7 +56,7 @@ echo "Creating new chapter"
 mkdir ch_${chapterLabel}
 
 # non-template content
-ln -s Makefile ch_${chapterLabel}
+pushd ch_${chapterLabel} ; ln -s ../Makefile  ; popd
 mkdir ch_${chapterLabel}/figures
 mkdir ch_${chapterLabel}/standalone
 
@@ -73,7 +73,8 @@ sed s/AAA/"${lecture}"/ < templates/ch_empty/ch_empty.org  | \
 # link pseudo tex files to tex file, just to have the names in place
 ln -s ch_${chapterLabel}/ch_${chapterLabel}.tex ch_${chapterLabel}/ch_${chapterLabel}_169.tex
 ln -s ch_${chapterLabel}/ch_${chapterLabel}.tex ch_${chapterLabel}/ch_${chapterLabel}_handout.tex
-ln -s Makefile_standalone_figures ch_${chapterLabel}/standlone/Makefile
+# ln -s Makefile_standalone_figures ch_${chapterLabel}/standlone/Makefile
+pushd ch_${chapterLabel}/standalone ; ln -s ../../Makefile_standalone_figures Makefile ; popd 
 
 
 # put an external document reference into templates
