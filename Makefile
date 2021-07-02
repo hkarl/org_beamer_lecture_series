@@ -66,10 +66,10 @@ slides169: $(slides169Pdf)
 %.tex: %.org %_content.org $(TEMPLATES) $(BACKMATTER)
 	${EMACS} $< ${EMACSEXPORTPARAMS}
 
-%_handout.tex: %.org $(TEMPLATES) $(BACKMATTER)
+%_handout.tex: %.org %_content.org $(TEMPLATES) $(BACKMATTER)
 	${EMACS} $< ${EMACSEXPORTPARAMS}
 
-%_169.tex: %.org $(TEMPLATES) $(BACKMATTER)
+%_169.tex: %.org %_content.org $(TEMPLATES) $(BACKMATTER)
 	${EMACS} $< ${EMACSEXPORTPARAMS}
 
 
