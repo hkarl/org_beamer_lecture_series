@@ -63,7 +63,7 @@ slides169: OUTDIR = slides169
 slides169: $(slides169Pdf) 
 	cp $(slides169Pdf) ../output/$(OUTDIR)/
 
-%.tex: %.org $(TEMPLATES) $(BACKMATTER)
+%.tex: %.org %_content.org $(TEMPLATES) $(BACKMATTER)
 	${EMACS} $< ${EMACSEXPORTPARAMS}
 
 %_handout.tex: %.org $(TEMPLATES) $(BACKMATTER)
