@@ -1,0 +1,3 @@
+[submodule "hpi-slides"]
+	path = hpi-slides
+	url = https://gitlab.hpi.de/holger.karl/hpi-slides.git
