@@ -1,3 +1,7 @@
 \label{ch:DDD}
-\maketitle 
+
+\begin{frame}[title={bg=Hauptgebaeude_Tag}]
+ \maketitle 
+\end{frame}
+
 
