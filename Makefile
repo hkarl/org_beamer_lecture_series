@@ -29,6 +29,12 @@ BACKMATTER := ../acronyms.tex
 FIGURES := $(wildcard figures/*)
 STANDALONEFIGS := $(wildcard standalone/*.tex)
 
+# Setting environment for HPI slides right
+.EXPORT_ALL_VARIABLES:
+TEXINPUTS=".:../hpi-slides/src:./hpi-slides/src::"
+TFMFONTS=".:../hpi-slides/src:./hpi-slides/src::"
+TTFONTS=".:../hpi-slides/src:./hpi-slides/src::"
+
 all: 
 	-make chapterfigures
 	-make -C book book
@@ -46,9 +52,10 @@ chapterfigures:
 chapter: slides handout slides169 
 
 quick:
+	echo $$TEXINPUTS 
 	quick=True make slides
 
-slides: BEAMERPARAM = presentation
+slides: BEAMERPARAM = presentation,aspectratio=43
 slides: OUTDIR = slides
 slides: $(slidesPdf)
 	cp $(slidesPdf) ../output/$(OUTDIR)/
@@ -75,11 +82,11 @@ slides169: $(slides169Pdf)
 
 %.pdf: %.tex $(STANDALONEFIGS)
 	make -C standalone all 
-	-${PDFLATEX} "\\PassOptionsToClass{$(BEAMERPARAM)}{beamer}\\input{$<}"
+	-${PDFLATEX} "\\PassOptionsToClass{$(BEAMERPARAM)}{beamerhpi}\\input{$<}"
 ifndef quick
 	-${BIBCOMMAND} $(basename $<)
-	-${PDFLATEX} "\\PassOptionsToClass{$(BEAMERPARAM)}{beamer}\\input{$<}"
-	-${PDFLATEX} "\\PassOptionsToClass{$(BEAMERPARAM)}{beamer}\\input{$<}"
+	-${PDFLATEX} "\\PassOptionsToClass{$(BEAMERPARAM)}{beamerhpi}\\input{$<}"
+	-${PDFLATEX} "\\PassOptionsToClass{$(BEAMERPARAM)}{beamerhpi}\\input{$<}"
 endif
 
 
