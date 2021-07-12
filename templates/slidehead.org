@@ -36,6 +36,11 @@
 #+LATEX_HEADER: \definecolor{linkscolor}{HTML}{2A1B81}
 #+LATEX_HEADER: \hypersetup{pdfauthor={Holger Karl}, pdftitle={GDS}, colorlinks = true, linkcolor=., urlcolor = linkscolor, citecolor = green}
 
+# Glossaries:
+#+LATEX_HEADER: \usepackage[acronyms,toc=false]{glossaries}
+#+LATEX_HEADER: \loadglsentries{../glossary}
+#+LATEX_HEADER: \renewcommand{\glossarysection}[2][]{}
+#+LATEX_HEADER: \makeglossaries
 
 
 #+LATEX_HEADER: \newcounter{chapter}

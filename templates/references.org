@@ -18,5 +18,15 @@
     :BEAMER_OPT: allowframebreaks
     :END:
 
-\tiny
-\input{../acronyms}
+
+
+\printacronyms
+
+
+*** Glossary 
+    :PROPERTIES:
+    :BEAMER_OPT: allowframebreaks
+    :END:
+
+\printglossary[type=main]
+    

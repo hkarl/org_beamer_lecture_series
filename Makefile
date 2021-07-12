@@ -25,7 +25,7 @@ slides169Pdf := $(patsubst %.org,%_169.pdf,$(SOURCE))
 handoutPdf := $(patsubst %.org,%_handout.pdf,$(SOURCE))
 bookTex := $(patsubst %.org,%-chapter.tex,$(wildcard *.org))
 TEMPLATES := $(wildcard ../templates/*)
-BACKMATTER := ../acronyms.tex
+BACKMATTER := ../glossary.tex
 FIGURES := $(wildcard figures/*)
 STANDALONEFIGS := $(wildcard standalone/*.tex)
 
@@ -85,6 +85,7 @@ slides169: $(slides169Pdf)
 	-${PDFLATEX} "\\PassOptionsToClass{$(BEAMERPARAM)}{beamerhpi}\\input{$<}"
 ifndef quick
 	-${BIBCOMMAND} $(basename $<)
+	-makeglossaries $<
 	-${PDFLATEX} "\\PassOptionsToClass{$(BEAMERPARAM)}{beamerhpi}\\input{$<}"
 	-${PDFLATEX} "\\PassOptionsToClass{$(BEAMERPARAM)}{beamerhpi}\\input{$<}"
 endif
