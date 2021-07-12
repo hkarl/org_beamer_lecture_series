@@ -17,7 +17,7 @@
 #+LATEX_HEADER: \usetikzlibrary{tikzmark}
 #+LATEX_HEADER: \usepackage{tikzsymbols}
 #+LATEX_HEADER: \usepackage[export]{adjustbox}
-#+LATEX_HEADER: \graphicspath{{./figures/}{./standalone/}}
+#+LATEX_HEADER: \graphicspath{{./figures/}{./standalone/}{../hpi-slides/backgrounds/}}
 
 
 # Generic latex setup
