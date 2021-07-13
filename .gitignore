@@ -282,3 +282,4 @@ TSWLatexianTemp*
 
 # ignore generate PDFs
 output/*/*.pdf
+*/standalone/*.pdf
